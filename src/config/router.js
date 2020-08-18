@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:47:03
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-15 11:14:20
+ * @LastEditTime: 2020-08-16 15:46:22
  */
 //@ts-check
 const MethodEnum={
@@ -22,15 +22,29 @@ class RouterInfo{
     }
     
 }
-const StationManage=require("../stations/station-manage")
+  /**
+      * @Date: 2020-08-16 16:01:41
+      * @Description: 
+      * @typedef {import('../common/interfaces/base-manage')} BaseManage
+      * @type {Array<BaseManage>}  
+      */
+const moudles=[];
+const StationManage=require("../components/stations-manage/station-manage")
+const stationManage=new StationManage.StationManage();
+moudles.push(stationManage);
+// const sta2=new StationManage.StationManage();
+// if(stationManage===sta2){
+// console.log("single success");
+// }
 /**
  * @type {Map<string,RouterInfo>}
  */
 const routers=new Map();
 
-routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",StationManage.StationManage.getAllStations));
+routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",stationManage.getAllStations));
 module.exports={
     MethodEnum,
     RouterInfo,
     routers,
+    moudles,
 }

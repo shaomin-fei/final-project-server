@@ -4,13 +4,13 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 11:18:42
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-15 11:24:03
+ * @LastEditTime: 2020-08-16 16:22:07
  */
 //@ts-check
 class CenterInfo{
     name="";
-    lon="";
-    lat="";
+    lon=0;
+    lat=0;
     id="";
     /**
      *@typedef {import('./station')} Station
