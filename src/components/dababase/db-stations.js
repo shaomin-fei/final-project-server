@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-16 15:08:26
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-17 09:28:29
+ * @LastEditTime: 2020-08-18 20:41:12
  */
 
 const BaseManage=require("../../common/interfaces/base-manage");
@@ -31,6 +31,20 @@ class DbStations extends BaseManage{
             this.mockData();
         }
         return this.centerTree;
+    }
+    getSignalStaticByReason(){
+
+        return this.mockSigalStatic();
+    }
+    mockSigalStatic(){
+        const fs=require("fs");
+        const path=require("path");
+        const content=fs.readFileSync(path.join(__dirname,"signal-warn.json"),{
+            encoding:"utf-8",
+            flag:"r",
+        });
+        return JSON.parse(content);
+
     }
     /**
      * @Date: 2020-08-16 16:19:05

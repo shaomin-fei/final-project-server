@@ -4,9 +4,15 @@
  * @Author: shaomin fei
  * @Date: 2020-08-16 13:24:41
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-17 06:24:00
+ * @LastEditTime: 2020-08-18 10:34:08
  */
 
+ const DeviceStatusEnum={
+    WORKING:"working",
+    IDLE:"idle",
+    FAULT:"fault",
+    SHUTDOWN:"shutdown"
+}
 const {RunningTask,TaskInfo} = require("./task");
 
 class DeviceInfo{
@@ -26,4 +32,4 @@ class DeviceInfo{
     runningTasks=[];
 }
 
-module.exports=DeviceInfo;
+module.exports={DeviceInfo,DeviceStatusEnum};

@@ -1,0 +1,73 @@
+{
+  "powerIssue": [
+    {
+      "frequency": "91",
+      "stations": ["shao-yang-001", "heng-yang-001"],
+      "maxLevel": [50, 10],
+      "reason": ["Level too large", "Level too small"],
+      "information": ["unknown signal", "known as music station"],
+      "occupy": [100, 0],
+      "occurTime":["2020-08-19 8:45:20","2020-08-19 9:45:20"]
+    },
+    {
+      "frequency": "93",
+      "stations": ["heng-yang-001", "zhu-zhou-001"],
+      "maxLevel": [15, 8],
+      "reason": ["Level too small", "Level too small"],
+      "information": ["known as news station", "known as music station"],
+      "occupy": [10, 0],
+      "occurTime":["2020-08-20 13:45:20","2020-08-21 14:05:20"]
+    }
+  ],
+  "timeIssue":[
+    {
+        "frequency": "94",
+        "stations": ["zhu-zhou-001", "chang-sha-right-001"],
+        "maxLevel": [80, 60],
+        "reason": ["shouldn't appear", "shouldn't appear"],
+        "information": ["known as normal station", "known as normal station"],
+        "occupy": [100, 95],
+        "occurTime":["2020-08-20 3:45:20","2020-08-21 1:05:20"]
+      },
+      {
+        "frequency": "95",
+        "stations": ["chang-sha-right-001", "huai-hua-001"],
+        "maxLevel": [65, 59],
+        "reason": ["shouldn't appear", "shouldn't appear"],
+        "information": ["known as normal station", "known as normal station"],
+        "occupy": [100, 100],
+        "occurTime":["2020-08-20 2:45:20","2020-08-21 2:05:20"]
+      }
+  ],
+  "newSignal":[
+    {
+        "frequency": "104",
+        "stations": ["chang-sha-right-001", "yue-yang-001","zhang-jia-jie-001","huai-hua-001"],
+        "maxLevel": [80, 60,75,65],
+        "reason": ["first appear", "first appear","appear again","first appear"],
+        "information": ["unknown signal", "unknown signal","once illegal","unknown signal"],
+        "occupy": [100, 95],
+        "occurTime":["2020-08-20 2:45:20","2020-08-21 2:05:20"]
+      },
+      {
+        "frequency": "105",
+        "stations": ["chang-sha-right-001", "zhu-zhou-001"],
+        "maxLevel": [65, 59],
+        "reason": ["first appear", "first appear"],
+        "information": ["unknown signal", "unknown signal"],
+        "occupy": [100, 80],
+        "occurTime":["2020-08-20 12:45:20","2020-08-21 12:05:20"]
+      },
+      {
+        "frequency": "106",
+        "stations": ["heng-yang-001", "zhu-zhou-001"],
+        "maxLevel": [65, 59],
+        "reason": ["first appear", "first appear"],
+        "information": ["unknown signal", "unknown signal"],
+        "occupy": [100, 80],
+        "occurTime":["2020-08-20 15:45:20","2020-08-21 16:05:20"]
+      }
+  ]
+}
+
+

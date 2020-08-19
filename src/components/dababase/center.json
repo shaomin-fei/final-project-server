@@ -8,11 +8,20 @@
             "id":"shao-yang-001",
             "name":"Virtual-001",
             "lon":111.482357,
-            "lat":27.237744,
+            "lat":27.237744,"netband":10,
+            "netSpeed":550,
             "devices":[{
                 "id":"device-shao-yang-001",
                 "name":"EB500",
                 "status":"working",
+                "runningTasks":[{
+                    "id":"001",
+                    "name":"Auto",
+                    "executeUser":"admin",
+                    "priority":1,
+                    "type":"Auto",
+                    "startTime":"2020-8-16 13:10:09"
+                }],
                 "abilities":[
                     {
                         "name":"FIXFQ",
@@ -33,6 +42,14 @@
                 "id":"device-heng-yang-001",
                 "name":"ESMD",
                 "status":"working",
+                "runningTasks":[{
+                    "id":"002",
+                    "name":"Fixed",
+                    "executeUser":"admin",
+                    "priority":1,
+                    "type":"Fixed",
+                    "startTime":"2020-8-15 13:10:09"
+                }],
                 "abilities":[
                     {
                         "name":"FIXFQ",
@@ -43,16 +60,24 @@
         },
 
         {
-            "id":"ji-an-001",
+            "id":"zhu-zhou-001",
             "name":"Virtual-003",
-            "lon":114.974704,
-            "lat":27.082047,
+            "lon":113.518816,
+            "lat":27.511891,
             "netband":10,
             "netSpeed":600,
             "devices":[{
-                "id":"device-ji-an-001",
+                "id":"device-zhu-zhou-001",
                 "name":"DDF255",
                 "status":"working",
+                "runningTasks":[{
+                    "id":"003",
+                    "name":"Scan",
+                    "executeUser":"admin",
+                    "priority":1,
+                    "type":"Scan",
+                    "startTime":"2020-8-14 13:10:09"
+                }],
                 "abilities":[
                     {
                         "name":"FIXFQ",
@@ -63,14 +88,14 @@
         },
 
         {
-            "id":"nan-chang-001",
+            "id":"chang-sha-right-001",
             "name":"Virtual-004",
-            "lon":115.891545,
-            "lat":28.688197,
+            "lon":114.135297,
+            "lat":28.363269,
             "netband":10,
             "netSpeed":650,
             "devices":[{
-                "id":"device-nan-chang-001",
+                "id":"device-chang-sha-right-001",
                 "name":"DDF255",
                 "status":"idle",
                 "abilities":[
@@ -121,7 +146,7 @@
         },
         {
             "id":"huai-hua-001",
-            "name":"Virtual-006",
+            "name":"Virtual-007",
             "lon":110.000068,
             "lat":27.569078,
             "netband":10,
@@ -129,7 +154,7 @@
             "devices":[{
                 "id":"huai-hua-001",
                 "name":"DDF550",
-                "status":"idle",
+                "status":"fault",
                 "abilities":[
                     {
                         "name":"FIXFQ",

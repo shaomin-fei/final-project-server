@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:47:03
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-16 15:46:22
+ * @LastEditTime: 2020-08-18 20:47:30
  */
 //@ts-check
 const MethodEnum={
@@ -29,9 +29,12 @@ class RouterInfo{
       * @type {Array<BaseManage>}  
       */
 const moudles=[];
-const StationManage=require("../components/stations-manage/station-manage")
+const StationManage=require("../components/stations-manage/station-manage");
+const SignalManage=require("../components/signal-manage/signal-manage");
 const stationManage=new StationManage.StationManage();
+const signalManage=new SignalManage();
 moudles.push(stationManage);
+moudles.push(signalManage);
 // const sta2=new StationManage.StationManage();
 // if(stationManage===sta2){
 // console.log("single success");
@@ -42,6 +45,7 @@ moudles.push(stationManage);
 const routers=new Map();
 
 routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",stationManage.getAllStations));
+routers.set("/getSignalStaticByReason",new RouterInfo(MethodEnum.GET, "/getSignalStaticByReason",signalManage.getSignalStaticByReason));
 module.exports={
     MethodEnum,
     RouterInfo,
