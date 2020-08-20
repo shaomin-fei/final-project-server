@@ -19,7 +19,7 @@
       "occurTime":["2020-08-20 13:45:20","2020-08-21 14:05:20"]
     }
   ],
-  "timeIssue":[
+  "newSignal":[
     {
         "frequency": "94",
         "stations": ["zhu-zhou-001", "chang-sha-right-001"],
@@ -39,15 +39,15 @@
         "occurTime":["2020-08-20 2:45:20","2020-08-21 2:05:20"]
       }
   ],
-  "newSignal":[
+  "timeIssue":[
     {
         "frequency": "104",
         "stations": ["chang-sha-right-001", "yue-yang-001","zhang-jia-jie-001","huai-hua-001"],
         "maxLevel": [80, 60,75,65],
         "reason": ["first appear", "first appear","appear again","first appear"],
         "information": ["unknown signal", "unknown signal","once illegal","unknown signal"],
-        "occupy": [100, 95],
-        "occurTime":["2020-08-20 2:45:20","2020-08-21 2:05:20"]
+        "occupy": [100, 95,80,85],
+        "occurTime":["2020-08-20 2:45:20","2020-08-21 2:05:20","2020-08-15 3:05:20","2020-08-01 4:05:20"]
       },
       {
         "frequency": "105",

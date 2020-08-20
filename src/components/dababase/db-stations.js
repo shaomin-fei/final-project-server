@@ -36,6 +36,18 @@ class DbStations extends BaseManage{
 
         return this.mockSigalStatic();
     }
+    getDataStorageInfo(){
+        return this.mockDataStorageInfo();
+    }
+    mockDataStorageInfo(){
+        const path=require("path");
+        const fs=require("fs");
+        const content=fs.readFileSync(path.join(__dirname,"data-storage.json"),{
+            encoding:"utf-8",
+            flag:"r",
+        });
+        return JSON.parse(content);
+    }
     mockSigalStatic(){
         const fs=require("fs");
         const path=require("path");

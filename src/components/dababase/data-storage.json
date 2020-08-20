@@ -1,0 +1,29 @@
+{
+    "totalG":1500,
+    "remainG":853,
+    "Spectrum":{
+        "max":200,
+        "percent":80
+    },
+    "IQ":{
+        "max":200,
+        "percent":60
+    },
+    "Audio":{
+        "max":1000,
+        "percent":70
+    },
+    "Level":{
+        "max":1,
+        "percent":20
+    },
+    "ITU":{
+        "max":1,
+        "percent":80
+    },
+    "Others":{
+        "max":8,
+        "percent":40
+    }
+
+}
