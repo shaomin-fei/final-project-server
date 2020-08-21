@@ -133,7 +133,7 @@
             "netband":10,
             "netSpeed":750,
             "devices":[{
-                "id":"zhang-jia-jie-001",
+                "id":"device-zhang-jia-jie-001",
                 "name":"DDF550",
                 "status":"idle",
                 "abilities":[
@@ -152,7 +152,7 @@
             "netband":10,
             "netSpeed":800,
             "devices":[{
-                "id":"huai-hua-001",
+                "id":"device-huai-hua-001",
                 "name":"DDF550",
                 "status":"fault",
                 "abilities":[
