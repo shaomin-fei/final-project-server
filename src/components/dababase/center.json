@@ -16,7 +16,7 @@
                 "status":"working",
                 "runningTasks":[{
                     "id":"001",
-                    "name":"Auto",
+                    "name":"FIXFQ",
                     "executeUser":"admin",
                     "priority":1,
                     "type":"Auto",
@@ -44,10 +44,10 @@
                 "status":"working",
                 "runningTasks":[{
                     "id":"002",
-                    "name":"Fixed",
+                    "name":"FIXFQ",
                     "executeUser":"admin",
                     "priority":1,
-                    "type":"Fixed",
+                    "type":"RealTime",
                     "startTime":"2020-8-15 13:10:09"
                 }],
                 "abilities":[
@@ -75,7 +75,7 @@
                     "name":"Scan",
                     "executeUser":"admin",
                     "priority":1,
-                    "type":"Scan",
+                    "type":"RealTime",
                     "startTime":"2020-8-14 13:10:09"
                 }],
                 "abilities":[

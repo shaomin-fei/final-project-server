@@ -4,12 +4,12 @@
  * @Author: shaomin fei
  * @Date: 2020-08-16 14:05:48
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-18 12:04:53
+ * @LastEditTime: 2020-08-21 21:48:00
  */
 const TaskType={
     auto:"Auto",
-    fixed:"Fixed",
-    scan:"Scan",
+    realtime:"RealTime",
+    schedule:"Schedule",
 }
 class RunningTask{
     id="";
