@@ -12,6 +12,8 @@ const TaskType={
     schedule:"Schedule",
 }
 class RunningTask{
+    stationId="";
+    deviceId="";
     id="";
     name="";
     param="";

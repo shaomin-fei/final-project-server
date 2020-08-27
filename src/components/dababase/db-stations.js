@@ -19,7 +19,7 @@ class DbStations extends BaseManage{
     constructor(){
         super();
     }
-    start(){
+    start(params){
 // todo get stations from db
     }
     stop(){

@@ -7,7 +7,7 @@
  * @LastEditTime: 2020-08-16 16:05:34
  */
 class BaseManage{
-    start(){
+    start(params=null){
 
     }
     stop(){

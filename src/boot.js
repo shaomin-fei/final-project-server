@@ -16,10 +16,10 @@ class Boot{
       * @param {Array<BaseManage>}  moudles
       * @return {void} 
       */
-     start(moudles){
+     start(moudles,params){
         moudles.forEach(element => {
              if(element instanceof BaseManage){
-                 element.start();
+                 element.start(params);
              }else{
                 console.log("not a basemanage",element);
              }

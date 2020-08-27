@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:47:03
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-19 23:05:51
+ * @LastEditTime: 2020-08-26 10:44:31
  */
 //@ts-check
 const MethodEnum={
@@ -32,12 +32,15 @@ const moudles=[];
 const StationManage=require("../components/stations-manage/station-manage");
 const SignalManage=require("../components/signal-manage/signal-manage");
 const StaticManage=require("../components/static-manage/static-manage");
+const WSServerManage=require("../components/ws-server-manage/ws-server");
 const stationManage=new StationManage.StationManage();
 const signalManage=new SignalManage();
 const staticManage=new StaticManage();
+const wsServerManage=new WSServerManage();
 moudles.push(stationManage);
 moudles.push(signalManage);
 moudles.push(stationManage);
+moudles.push(wsServerManage);
 // const sta2=new StationManage.StationManage();
 // if(stationManage===sta2){
 // console.log("single success");

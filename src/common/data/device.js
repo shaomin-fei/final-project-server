@@ -16,6 +16,7 @@
 const {RunningTask,TaskInfo} = require("./task");
 
 class DeviceInfo{
+    stationId="";
     id="";
     name="";
     status=DeviceStatusEnum.WORKING;

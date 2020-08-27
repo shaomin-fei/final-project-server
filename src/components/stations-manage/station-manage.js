@@ -25,9 +25,9 @@ const {DeviceInfo,DeviceStatusEnum}=require("../../common/data/device");
             }
             return instance;
         }
-        start(){
+        start(params){
             //this.centerTree=this.dbStations.getStations()||null;
-            this.dbStations.start();
+            this.dbStations.start(null);
         }
         stop(){
             this.dbStations.stop();
