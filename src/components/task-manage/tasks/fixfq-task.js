@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-26 16:01:19
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-26 21:51:19
+ * @LastEditTime: 2020-08-28 22:35:07
  */
 const BaseTask=require("./base-task");
 
@@ -64,7 +64,7 @@ class FixfqTask extends BaseTask{
         if(freq>95){
             filePath=path.join(path.resolve()+"/src/data/FIXFQ/101700000_120000_20200731_172353_0000.FIXFQ") ;
         }else{
-            filePath=path.join(path.resolve()+"/src/data/FIXFQ/90000000_120000_20200731_172741_0000.FIXFQ") ;
+            filePath=path.join(path.resolve()+"/src/data/FIXFQ/101700000_120000_20200731_172353_0000.FIXFQ") ;
            
         }
         console.log(filePath,__dirname);
@@ -88,7 +88,7 @@ class FixfqTask extends BaseTask{
                 readIndex=0;
             }
 
-        }, 100);
+        }, 18);
     }
     
 }
