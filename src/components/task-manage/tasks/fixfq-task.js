@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-26 16:01:19
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-28 22:35:07
+ * @LastEditTime: 2020-08-31 11:18:55
  */
 const BaseTask=require("./base-task");
 
@@ -51,7 +51,7 @@ class FixfqTask extends BaseTask{
         const param=executeParam.params;
         const szParam=param.split(";");
         const freqParam=szParam.find(pa=>{
-            if(pa.indexOf("centerfreq")!=-1){
+            if(pa.indexOf("CenterFreq")!=-1){
                 return true;
             }
             return false;
@@ -64,7 +64,7 @@ class FixfqTask extends BaseTask{
         if(freq>95){
             filePath=path.join(path.resolve()+"/src/data/FIXFQ/101700000_120000_20200731_172353_0000.FIXFQ") ;
         }else{
-            filePath=path.join(path.resolve()+"/src/data/FIXFQ/101700000_120000_20200731_172353_0000.FIXFQ") ;
+            filePath=path.join(path.resolve()+"/src/data/FIXFQ/90000000_120000_20200731_172741_0000.FIXFQ") ;
            
         }
         console.log(filePath,__dirname);

@@ -5,13 +5,14 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:51:16
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-18 11:09:04
+ * @LastEditTime: 2020-08-30 12:10:58
  */
 
 
  const DbStations=require("../dababase/db-stations");
  const BaseManage=require("../../common/interfaces/base-manage");
 const Station = require("../../common/data/station");
+const http=require("http");
 const {DeviceInfo,DeviceStatusEnum}=require("../../common/data/device");
  const getSingletonStationManage=(function(){
      let instance=null;
@@ -44,6 +45,37 @@ const {DeviceInfo,DeviceStatusEnum}=require("../../common/data/device");
                 return value;
             }) ;
             return res.send(result);
+        }
+        /**
+         * @Date: 2020-08-30 10:00:50
+         * @Description: 
+        
+         */
+        getTaskParam=(req,res)=>{
+            let param="";
+            const {
+                stationid,
+                deviceid,
+                taskname}=req.query;
+            const stations=this.dbStations.getStations().stations;
+
+            const station=stations.find((sta)=>{
+                return sta.id===stationid;
+            });
+            if(station){
+                const device=station.devices.find((dev)=>{
+                    return dev.id===deviceid;
+                });
+                if(device){
+                   const ability= device.abilities.find(abi=>{
+                        return abi.name===taskname;
+                    });
+                    if(ability){
+                        param=ability.param;
+                    }
+                }
+            }
+            return res.send(param);
         }
         /**
          * @Date: 2020-08-18 10:24:17

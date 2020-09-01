@@ -53,6 +53,7 @@ const routers=new Map();
 routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",stationManage.getAllStations));
 routers.set("/getSignalStaticByReason",new RouterInfo(MethodEnum.GET, "/getSignalStaticByReason",signalManage.getSignalStaticByReason));
 routers.set("/getStorageInfo",new RouterInfo(MethodEnum.GET, "/getStorageInfo",staticManage.getStorageInfo));
+routers.set("/getTaskParam",new RouterInfo(MethodEnum.GET,"/getTaskParam",stationManage.getTaskParam))
 
 module.exports={
     MethodEnum,
