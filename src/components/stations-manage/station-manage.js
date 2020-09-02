@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:51:16
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-30 12:10:58
+ * @LastEditTime: 2020-09-02 16:36:13
  */
 
 
@@ -14,10 +14,16 @@
 const Station = require("../../common/data/station");
 const http=require("http");
 const {DeviceInfo,DeviceStatusEnum}=require("../../common/data/device");
+const CenterInfo = require("../../common/data/center");
+const { stat } = require("fs");
  const getSingletonStationManage=(function(){
      let instance=null;
      class StationManage extends BaseManage{
         dbStations=new DbStations();
+        /**
+         * @type {CenterInfo}
+         */
+        center=null;
         //centerTree=null;
         constructor(){
             super();
@@ -37,8 +43,11 @@ const {DeviceInfo,DeviceStatusEnum}=require("../../common/data/device");
          * not call by object,we just register the function address to routers, so here we must use arrow functon,or this is null
          */
         getAllStations=(req,res)=>{
-            this.modifyStationStatus(this.dbStations.getStations().stations);
-            const result=JSON.stringify(this.dbStations.getStations(),(key,value)=>{
+            if(!this.center){
+                this.center=this.dbStations.getStations();
+            }
+            this.modifyStationStatus(this.center.stations);
+            const result=JSON.stringify(this.center,(key,value)=>{
                 if(key==="param"){
                     value="";
                 }
@@ -119,7 +128,49 @@ const {DeviceInfo,DeviceStatusEnum}=require("../../common/data/device");
                
             });
         }
-        
+        powerOperation=(req,res)=>{
+
+            const {stationid,value}=req.body;
+            const station=this.getStationByID(stationid);
+            if(!station){
+                console.log("station not found,id=",stationid);
+                return res.send("station not found");
+            }
+            
+            setTimeout(() => {
+                if(value==="off"){
+                    station.status=DeviceStatusEnum.SHUTDOWN;
+                    if(station.devices&&station.devices.length>0){
+                        station.devices.forEach(dev=>{
+                            dev.status=DeviceStatusEnum.SHUTDOWN;
+                            dev.runningTasks=[];
+                        })
+                    }
+                }else if(value==="on"){
+                    station.status=DeviceStatusEnum.IDLE;
+                    if(station.devices&&station.devices.length>0){
+                        station.devices.forEach(dev=>{
+                            dev.status=DeviceStatusEnum.IDLE;
+                            dev.runningTasks=[];
+                        })
+                    }
+                }
+                res.send("ok");
+            }, 3000);
+            //console.log(req);
+        }
+        getStationByID=(stationid)=>{
+            if(!this.center){
+                this.center=this.dbStations.getStations();
+               
+            }
+            if(this.center&&this.center.stations&&this.center.stations.length>0){
+                return this.center.stations.find((sta)=>{
+                    return sta.id===stationid;
+                })
+            }
+            return null;
+        }
     }
     return StationManage;
  })();

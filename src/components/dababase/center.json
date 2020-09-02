@@ -10,6 +10,38 @@
             "lon":111.482357,
             "lat":27.237744,"netband":10,
             "netSpeed":50,
+            "environment":{
+                "Temperature":{
+                    "value":40,
+                    "unit":"°C",
+                    "warnning":0
+                },
+                "Humidity":{
+                    "value":50,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":220,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2,
+                    "unit":"A",
+                    "warnning":0
+                }
+            },
             
             "devices":[{
                 "stationId":"shao-yang-001",
@@ -42,7 +74,39 @@
             "lat":26.861937,
             "netband":10,
             "netSpeed":500,
-            
+            "environment":{
+                "Temperature":{
+                    "value":41,
+                    "unit":"°C",
+                    "warnning":0
+                },
+                "Humidity":{
+                    "value":51,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":221,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2.1,
+                    "unit":"A",
+                    "warnning":0
+                }
+            },
+
             "devices":[{
                 "stationId":"heng-yang-001",
                 "id":"device-heng-yang-001",
@@ -74,7 +138,39 @@
             "lat":27.511891,
             "netband":10,
             "netSpeed":600,
-           
+            "environment":{
+                "Temperature":{
+                    "value":42,
+                    "unit":"°C",
+                    "warnning":0
+                },
+                "Humidity":{
+                    "value":52,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":222,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2.2,
+                    "unit":"A",
+                    "warnning":0
+                }
+            },
+
             "devices":[{
                 "stationId":"zhu-zhou-001",
                 "id":"device-zhu-zhou-001",
@@ -106,7 +202,39 @@
             "lat":28.363269,
             "netband":10,
             "netSpeed":650,
-            
+            "environment":{
+                "Temperature":{
+                    "value":43,
+                    "unit":"°C",
+                    "warnning":0
+                },
+                "Humidity":{
+                    "value":53,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":223,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2.3,
+                    "unit":"A",
+                    "warnning":0
+                }
+            },
+
             "devices":[{
                 "stationId":"chang-sha-right-001",
                 "id":"device-chang-sha-right-001",
@@ -127,7 +255,38 @@
             "lat":29.356359,
             "netband":10,
             "netSpeed":700,
-            
+            "environment":{
+                "Temperature":{
+                    "value":44,
+                    "unit":"°C",
+                    "warnning":0
+                },
+                "Humidity":{
+                    "value":54,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":224,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2.4,
+                    "unit":"A",
+                    "warnning":0
+                }
+            },
             "devices":[{
                 "stationId":"yue-yang-001",
                 "id":"device-yue-yang-001",
@@ -148,7 +307,38 @@
             "lat":29.131327,
             "netband":10,
             "netSpeed":750,
-            
+            "environment":{
+                "Temperature":{
+                    "value":45,
+                    "unit":"°C",
+                    "warnning":0
+                },
+                "Humidity":{
+                    "value":55,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":225,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2.5,
+                    "unit":"A",
+                    "warnning":0
+                }
+            },
             "devices":[{
                 "stationId":"zhang-jia-jie-001",
                 "id":"device-zhang-jia-jie-001",
@@ -169,7 +359,38 @@
             "lat":27.569078,
             "netband":10,
             "netSpeed":800,
-            
+            "environment":{
+                "Temperature":{
+                    "value":46,
+                    "unit":"°C",
+                    "warnning":1
+                },
+                "Humidity":{
+                    "value":56,
+                    "unit":"%",
+                    "warnning":0
+                },
+                "Smoke":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Access":{
+                    "value":"No",
+                    "unit":"",
+                    "warnning":0
+                },
+                "Voltage":{
+                    "value":226,
+                    "unit":"V",
+                    "warnning":0
+                },
+                "Current":{
+                    "value":2.6,
+                    "unit":"A",
+                    "warnning":1
+                }
+            },
             "devices":[{
                 "stationId":"huai-hua-001",
                 "id":"device-huai-hua-001",

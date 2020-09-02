@@ -54,6 +54,7 @@ routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",station
 routers.set("/getSignalStaticByReason",new RouterInfo(MethodEnum.GET, "/getSignalStaticByReason",signalManage.getSignalStaticByReason));
 routers.set("/getStorageInfo",new RouterInfo(MethodEnum.GET, "/getStorageInfo",staticManage.getStorageInfo));
 routers.set("/getTaskParam",new RouterInfo(MethodEnum.GET,"/getTaskParam",stationManage.getTaskParam))
+routers.set("/powerOperation",new RouterInfo(MethodEnum.PUT,"/powerOperation",stationManage.powerOperation));
 
 module.exports={
     MethodEnum,

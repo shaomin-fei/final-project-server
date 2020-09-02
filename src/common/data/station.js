@@ -4,9 +4,18 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 11:17:58
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-25 23:21:22
+ * @LastEditTime: 2020-09-01 20:22:22
  */
 const {DeviceInfo,DeviceStatusEnum}=require("./device");
+
+class Environment{
+    Temperature="85";
+    Humidity="70%";
+    Smoke="No";
+    Access="No";
+    Voltage=214;
+    Current=2.9;
+}
 class Station{
     id="";
     name="";
@@ -21,6 +30,11 @@ class Station{
      * realtime speed from station to center,usually test five times and calculate the average.,KB/s
      */
     netSpeed=500
+
+    /**
+     * @type {Environment}
+     */
+    environment=null;
     /**
      * websocket address
      */
