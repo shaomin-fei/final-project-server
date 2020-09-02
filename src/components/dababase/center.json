@@ -1,7 +1,7 @@
 {
     "name":"Center",
-    "lat":112.941802,
-    "lon":28.224274,
+    "lat":28.224274,
+    "lon":112.941802,
     "id":"00000001",
     "stations":[
         {
@@ -9,7 +9,7 @@
             "name":"Virtual-001",
             "lon":111.482357,
             "lat":27.237744,"netband":10,
-            "netSpeed":550,
+            "netSpeed":50,
             
             "devices":[{
                 "stationId":"shao-yang-001",
