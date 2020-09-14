@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:29:11
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-09-02 15:51:56
+ * @LastEditTime: 2020-09-10 20:27:18
  */
 // const NetSpeed=require("./common/net/net-speed");
 // NetSpeed.ping("https://inews.gtimg.com/newsapp_bt/0/12297493709/1000",({timeCost,speed})=>{
@@ -18,8 +18,14 @@ const http = require('http')
   , https = require('https')
   , express = require('express')
   , app = express();
-
-
+// 跨域
+const cors=require("cors");
+  // app.use((req,res,next)=>{
+  //   // 跨域访问，*表示每个接口，这样客户端不需要设置代理
+  //   res.setHeader("Access-Control-Allow-Origin","*");
+  //   next();
+  // });
+  app.use(cors());
   const bodyParser=require("body-parser")
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
