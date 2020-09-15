@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-16 15:08:26
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-09-13 22:56:44
+ * @LastEditTime: 2020-09-14 23:37:52
  */
 
 const BaseManage=require("../../common/interfaces/base-manage");
@@ -18,7 +18,7 @@ class DbStations extends BaseManage{
      */
     centerTree=null;
     /**
-     * @type {[]}
+     * @type {Array<object>}
      */
     signals=null;
     constructor(){
@@ -53,6 +53,44 @@ class DbStations extends BaseManage{
             return (time>=start)&&(time<=end)
         });
         return filterSignals?filterSignals:[];
+    }
+  
+    addSingnalInfo(signal){
+        if(!this.signals){
+            this.signals=this.mockSignals();
+        }
+        if(!signal.key){
+            signal.key=Date.now().toString();
+        }
+        this.signals&&this.signals.push(signal);
+        return {success:true};
+    }
+    updateSingnalInfo(signal){
+        if(!this.signals){
+            this.signals=this.mockSignals();
+        }
+        const sigToUpdateIndex=this.signals.findIndex(sig=>{
+           return sig.key===signal.key;
+        });
+        if(sigToUpdateIndex>=0){
+            this.signals[sigToUpdateIndex]=signal;
+            return {success:true};
+        }else{
+            return {success:false,errorInfo:"Signal not found"};
+        }
+        
+    }
+    deleteSingnalInfo(key){
+        if(!this.signals){
+            this.signals=this.mockSignals();
+        }
+        const index=this.signals.findIndex(sig=>{
+            return sig.key===key;
+        })
+        if(index>=0){
+            this.signals.splice(index,1);
+        }
+        return {success:true};
     }
     getDataStorageInfo(){
         return this.mockDataStorageInfo();

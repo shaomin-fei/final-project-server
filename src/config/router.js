@@ -53,6 +53,9 @@ const routers=new Map();
 routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",stationManage.getAllStations));
 routers.set("/getSignalStaticByReason",new RouterInfo(MethodEnum.GET, "/getSignalStaticByReason",signalManage.getSignalStaticByReason));
 routers.set("/getSignalInfoByTime",new RouterInfo(MethodEnum.GET, "/getSignalInfoByTime",signalManage.getSignalInfoByTime));
+routers.set("/addSingnalInfo",new RouterInfo(MethodEnum.POST, "/addSingnalInfo",signalManage.addSingnalInfo));
+routers.set("/updateSingnalInfo",new RouterInfo(MethodEnum.PUT, "/updateSingnalInfo",signalManage.updateSingnalInfo));
+routers.set("/deleteSingnalInfo",new RouterInfo(MethodEnum.DELETE, "/deleteSingnalInfo",signalManage.deleteSingnalInfo));
 routers.set("/getStorageInfo",new RouterInfo(MethodEnum.GET, "/getStorageInfo",staticManage.getStorageInfo));
 routers.set("/getTaskParam",new RouterInfo(MethodEnum.GET,"/getTaskParam",stationManage.getTaskParam))
 routers.set("/powerOperation",new RouterInfo(MethodEnum.PUT,"/powerOperation",stationManage.powerOperation));
