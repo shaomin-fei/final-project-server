@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:47:03
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-08-26 10:44:31
+ * @LastEditTime: 2020-09-15 21:11:36
  */
 //@ts-check
 const MethodEnum={
@@ -57,6 +57,11 @@ routers.set("/addSingnalInfo",new RouterInfo(MethodEnum.POST, "/addSingnalInfo",
 routers.set("/updateSingnalInfo",new RouterInfo(MethodEnum.PUT, "/updateSingnalInfo",signalManage.updateSingnalInfo));
 routers.set("/deleteSingnalInfo",new RouterInfo(MethodEnum.DELETE, "/deleteSingnalInfo",signalManage.deleteSingnalInfo));
 routers.set("/getStorageInfo",new RouterInfo(MethodEnum.GET, "/getStorageInfo",staticManage.getStorageInfo));
+routers.set("/getDiskUsedTrend",new RouterInfo(MethodEnum.GET, "/getDiskUsedTrend",staticManage.getDiskUsedTrend));
+routers.set("/getStorageOfEachStation",new RouterInfo(MethodEnum.GET, "/getStorageOfEachStation",staticManage.getStorageOfEachStation));
+routers.set("/getFoloderInfo",new RouterInfo(MethodEnum.GET, "/getFoloderInfo",staticManage.getFoloderInfo));
+routers.set("/downLoad",new RouterInfo(MethodEnum.GET, "/downLoad",staticManage.downLoad));
+
 routers.set("/getTaskParam",new RouterInfo(MethodEnum.GET,"/getTaskParam",stationManage.getTaskParam))
 routers.set("/powerOperation",new RouterInfo(MethodEnum.PUT,"/powerOperation",stationManage.powerOperation));
 

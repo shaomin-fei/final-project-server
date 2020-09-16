@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:29:11
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-09-10 20:27:18
+ * @LastEditTime: 2020-09-16 00:03:59
  */
 // const NetSpeed=require("./common/net/net-speed");
 // NetSpeed.ping("https://inews.gtimg.com/newsapp_bt/0/12297493709/1000",({timeCost,speed})=>{
@@ -29,6 +29,7 @@ const cors=require("cors");
   const bodyParser=require("body-parser")
   app.use(bodyParser.urlencoded({ extended: true }));
   app.use(bodyParser.json());
+
   const port=3005;
 
 
@@ -37,6 +38,7 @@ const Boot=require("./boot");
 
 const httpServer=http.createServer(app);
 const options={};
+
 
 httpServer.listen(port);
 //const socketIO=require("socket.io");

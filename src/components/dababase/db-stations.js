@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-16 15:08:26
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-09-14 23:37:52
+ * @LastEditTime: 2020-09-16 00:25:32
  */
 
 const BaseManage=require("../../common/interfaces/base-manage");
@@ -21,6 +21,8 @@ class DbStations extends BaseManage{
      * @type {Array<object>}
      */
     signals=null;
+
+
     constructor(){
         super();
     }
@@ -94,6 +96,88 @@ class DbStations extends BaseManage{
     }
     getDataStorageInfo(){
         return this.mockDataStorageInfo();
+    }
+    getDiskUsedTrend(){
+        return this.mockDiskUsedTrend();
+    }
+    getStorageOfEachStation(){
+        return this.mockStorageOfEachStation();
+    }
+    getFoloderInfo(queryPath,callback){
+        const path=require("path");
+        const fs=require("fs");
+        let root=path.join(path.resolve()+"/src/dataforquery") ;
+        let findPath="";
+        if(queryPath==="root"){
+            findPath=root;
+        }else{
+            findPath=root+queryPath;
+        }
+        const result=[];
+        fs.readdir(findPath,(err,files)=>{
+            if(err){
+                console.log("read file error");
+                return;
+            }
+            files.forEach(fileName=>{
+                let pathname = path.join(findPath, fileName);
+                const sta=fs.statSync(pathname);
+                if(sta.isDirectory()){
+                    result.push({
+                        name:fileName,
+                        type:"folder",
+                    });
+                }else if(sta.isFile()){
+                    result.push({
+                        name:fileName,
+                        type:"file",
+                    });
+                }
+
+            });
+            callback(result);
+        });
+        //return result;
+    }
+    downLoad(filePath,fileName,res){
+        const path=require("path");
+        const fs=require("fs");
+        let root=path.join(path.resolve()+"/src/dataforquery") ;
+        const file=root+filePath+"/"+fileName;
+        if(!fs.existsSync(file)){
+            res.set("Content-type","text/html");
+            res.send("file not exist!");
+            res.end();
+        }else{
+            res.set({
+                "Content-type":"application/octet-stream",
+                "Content-Disposition":"attachment;filename="+encodeURI(fileName)
+            });
+            const fReadStream = fs.createReadStream(file);
+            fReadStream.on("data",function(chunk){res.write(chunk,"binary")});
+            fReadStream.on("end",function () {
+                res.end();
+            });
+        }
+    }
+
+    mockStorageOfEachStation=()=>{
+        const fs=require("fs");
+        const path=require("path");
+        const content=fs.readFileSync(path.join(__dirname,"data-storage-station.json"),{
+            encoding:"utf-8",
+            flag:"r"
+        });
+        return JSON.parse(content);
+    }
+    mockDiskUsedTrend=()=>{
+        const fs=require("fs");
+        const path=require("path");
+        const content=fs.readFileSync(path.join(__dirname,"data-storage-trend.json"),{
+            encoding:"utf-8",
+            flag:"r"
+        });
+        return JSON.parse(content);
     }
     mockSignals=()=>{
         const path=require("path");
