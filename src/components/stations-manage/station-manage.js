@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:51:16
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-09-02 16:36:13
+ * @LastEditTime: 2020-09-17 17:33:41
  */
 
 
@@ -38,6 +38,24 @@ const { stat } = require("fs");
         }
         stop(){
             this.dbStations.stop();
+        }
+        addStation=(req,res)=>{
+            const stationInfo=req.body;
+            const info=this.dbStations.addStation(stationInfo);
+            const strInfo=JSON.stringify(info);
+            res.send(strInfo);
+        }
+        updateStation=(req,res)=>{
+            const stationInfo=req.body;
+            const info=this.dbStations.updateStation(stationInfo);
+            const strInfo=JSON.stringify(info);
+            res.send(strInfo);
+        }
+        deleteStation=(req,res)=>{
+            const key=req.query.key;
+            const info=this.dbStations.deleteStation(key);
+            const strInfo=JSON.stringify(info);
+            res.send(strInfo);
         }
         /**
          * not call by object,we just register the function address to routers, so here we must use arrow functon,or this is null

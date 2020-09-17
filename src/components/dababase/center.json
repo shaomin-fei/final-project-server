@@ -395,7 +395,7 @@
                 "stationId":"huai-hua-001",
                 "id":"device-huai-hua-001",
                 "name":"DDF550",
-                "status":"fault",
+                "status":"warning",
                 "abilities":[
                     {
                         "name":"FIXFQ",

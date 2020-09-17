@@ -1,0 +1,93 @@
+[
+    {
+        "key":"1",
+        "warningLevel":"Serious",
+        "Station":"Virtual-001",
+        "StartTime":"2020-09-01 11:55:59",
+        "EndTime":"2020-09-01 12:55:59",
+        "Reason":"Temperature/Current Exceed",
+        "needCancel":1
+    },
+    
+  {
+      "key":"2",
+      "warningLevel":"Fatal",
+      "Station":"Virtual-002",
+      "StartTime":"2020-09-02 11:55:59",
+      "EndTime":"2020-09-02 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":0
+  },
+  {
+      "key":"3",
+      "warningLevel":"General",
+      "Station":"Virtual-003",
+      "StartTime":"2020-09-03 11:55:59",
+      "EndTime":"2020-09-03 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":1
+  },
+  {
+      "key":"4",
+      "warningLevel":"Fatal",
+      "Station":"Virtual-004",
+      "StartTime":"2020-09-04 11:55:59",
+      "EndTime":"2020-09-04 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":0
+  },
+  {
+      "key":"5",
+      "warningLevel":"Serious",
+      "Station":"Virtual-005",
+      "StartTime":"2020-09-05 11:55:59",
+      "EndTime":"2020-09-05 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":1
+  },
+  {
+      "key":"6",
+      "warningLevel":"General",
+      "Station":"Virtual-006",
+      "StartTime":"2020-09-06 11:55:59",
+      "EndTime":"2020-09-06 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":0
+  },
+  {
+      "key":"7",
+      "warningLevel":"Fatal",
+      "Station":"Virtual-007",
+      "StartTime":"2020-09-07 11:55:59",
+      "EndTime":"2020-09-07 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":1
+  },
+  {
+      "key":"8",
+      "warningLevel":"Serious",
+      "Station":"Virtual-001",
+      "StartTime":"2020-09-08 11:55:59",
+      "EndTime":"2020-09-08 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":0
+  },
+  {
+      "key":"9",
+      "warningLevel":"General",
+      "Station":"Virtual-002",
+      "StartTime":"2020-09-09 11:55:59",
+      "EndTime":"2020-09-09 12:55:59",
+      "Reason":"Temperature Exceed",
+      "needCancel":1
+  },
+  {
+    "key":"10",
+    "warningLevel":"General",
+    "Station":"Virtual-001",
+    "StartTime":"2020-09-10 11:55:59",
+    "EndTime":"2020-09-10 12:55:59",
+    "Reason":"Temperature Exceed",
+    "needCancel":1
+}
+]

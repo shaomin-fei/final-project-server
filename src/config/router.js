@@ -5,7 +5,7 @@
  * @Author: shaomin fei
  * @Date: 2020-08-15 10:47:03
  * @LastEditors: shaomin fei
- * @LastEditTime: 2020-09-15 21:11:36
+ * @LastEditTime: 2020-09-16 21:29:09
  */
 //@ts-check
 const MethodEnum={
@@ -50,6 +50,9 @@ moudles.push(wsServerManage);
  */
 const routers=new Map();
 
+routers.set("/deleteStation",new RouterInfo(MethodEnum.DELETE, "/deleteStation",stationManage.deleteStation));
+routers.set("/addStation",new RouterInfo(MethodEnum.POST, "/addStation",stationManage.addStation));
+routers.set("/updateStation",new RouterInfo(MethodEnum.PUT, "/updateStation",stationManage.updateStation));
 routers.set("/getStations",new RouterInfo(MethodEnum.GET, "/getStations",stationManage.getAllStations));
 routers.set("/getSignalStaticByReason",new RouterInfo(MethodEnum.GET, "/getSignalStaticByReason",signalManage.getSignalStaticByReason));
 routers.set("/getSignalInfoByTime",new RouterInfo(MethodEnum.GET, "/getSignalInfoByTime",signalManage.getSignalInfoByTime));
@@ -61,6 +64,12 @@ routers.set("/getDiskUsedTrend",new RouterInfo(MethodEnum.GET, "/getDiskUsedTren
 routers.set("/getStorageOfEachStation",new RouterInfo(MethodEnum.GET, "/getStorageOfEachStation",staticManage.getStorageOfEachStation));
 routers.set("/getFoloderInfo",new RouterInfo(MethodEnum.GET, "/getFoloderInfo",staticManage.getFoloderInfo));
 routers.set("/downLoad",new RouterInfo(MethodEnum.GET, "/downLoad",staticManage.downLoad));
+
+routers.set("/getEnvWarning",new RouterInfo(MethodEnum.GET, "/getEnvWarning",staticManage.getEnvWarning));
+routers.set("/getEnvStaticByLevel",new RouterInfo(MethodEnum.GET, "/getEnvStaticByLevel",staticManage.getEnvStaticByLevel));
+routers.set("/cancelEnvironWarning",new RouterInfo(MethodEnum.PUT, "/cancelEnvironWarning",staticManage.cancelEnvironWarning));
+routers.set("/getStationLogInfo",new RouterInfo(MethodEnum.GET, "/getStationLogInfo",staticManage.getStationLogInfo));
+
 
 routers.set("/getTaskParam",new RouterInfo(MethodEnum.GET,"/getTaskParam",stationManage.getTaskParam))
 routers.set("/powerOperation",new RouterInfo(MethodEnum.PUT,"/powerOperation",stationManage.powerOperation));

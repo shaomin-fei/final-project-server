@@ -9,12 +9,36 @@
 const {DeviceInfo,DeviceStatusEnum}=require("./device");
 
 class Environment{
-    Temperature="85";
-    Humidity="70%";
-    Smoke="No";
-    Access="No";
-    Voltage=214;
-    Current=2.9;
+    Temperature={
+        value:43,
+        unit:"°C",
+       warnning:0
+    };
+    Humidity={
+        value:53,
+        unit:"%",
+        warnning:0
+    };
+    Smoke={
+        value:"No",
+        unit:"",
+        warnning:0
+    };
+    Access={
+        value:"No",
+        unit:"",
+        warnning:0
+    };
+    Voltage={
+        value:223,
+        unit:"V",
+        warnning:0
+    };
+    Current={
+        value:2.3,
+        unit:"A",
+        warnning:0
+    };
 }
 class Station{
     id="";
@@ -39,6 +63,8 @@ class Station{
      * websocket address
      */
     url="";
+
+    devicesUrl=[];
     /**
     *@type {Array<DeviceInfo>}
      * 
